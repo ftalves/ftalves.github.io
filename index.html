@@ -11,11 +11,11 @@
 
 <body>
   <main>
-
-    <div id='intro' class='block'>
-      <h1 class='fade-in'>Felipe Telles</h1>
-      <h2 class='fade-in'>Desenvolvedor Web • Full Stack</h2>
-      <h3 class='fade-in'>Porto Alegre, RS - Brasil</h3>
+    <div id='header'>
+      <a class='header-link hoverable' href='#intro'>INÍCIO</a>
+      <a class='header-link hoverable' href='#about'>SOBRE MIM</a>
+      <a class='header-link hoverable' href='#portfolio'>PORTFOLIO</a>
+      <a class='header-link hoverable' href='#contato'>CONTATO</a>
 
       <div id='social-buttons'>
         <a class='icon-wrapper hoverable' href='https://github.com/ftalves'>
@@ -25,14 +25,22 @@
           <img src='assets/img/resume.png' title='Currículo'>
         </a>
       </div>
+    </div>
 
-      <a class='fade-in-slow scroll hoverable' href='#about'>
-        <i>Saiba mais</i> <i class='fa fa-angle-down fa-2x'></i>
-      </a>
+    <div id='intro' class='block'>
+      <div class='block-content'>
+        <h1 class='fade-in'>Felipe Telles</h1>
+        <h2 class='fade-in'>Desenvolvedor Web • Full Stack</h2>
+        <h3 class='fade-in'>Porto Alegre, RS - Brasil</h3>
+
+        <a class='fade-in-slow scroll hoverable' href='#about'>
+          <i>Saiba mais</i> <i class='fa fa-angle-down fa-2x'></i>
+        </a>
+      </div>
     </div>
 
     <div id='about' class='block'>
-      <div id='about-content'>
+      <div class='block-content'>
         <img id='about-img' src='assets/img/me.jpg'>
         <div id='about-cards'>
           <div class='card'>
@@ -59,12 +67,12 @@
             </div>
           </div>
 
-          <div class='card collapsed'>
+          <div class='card'>
             <p class='card-title'>Filosofia</p>
             <p class='card-content'>Acredito que o código deva falar por si mesmo. Com foco em componentes e interfaces limpas, gosto de usar princípios de programação funcional para resolver problemas. Aprecio coisas simples. Comidas simples, bebidas simples, código simples. Até os problemas mais complexos podem ser divididos em peças únicas, isoladas e legíveis, como uma receita. Código escrito assim é mais fácil de testar, manter e escalar.</p>
           </div>
 
-          <div class='card collapsed'>
+          <div class='card'>
             <p class='card-title'>Princípios</p>
             <ul class='card-content'>
               <li>KISS (Keep It Simple, mantenha simplicidade)</li>
@@ -75,18 +83,22 @@
           </div>
         </div>
       </div>
-      <a class='scroll hoverable' href='#projects'>
-        PORTFOLIO <i class='fa fa-angle-down fa-2x'></i>
-      </a>
     </div>
 
-    <div id='projects' class='block'>
-      <div id='projects-content'>
+    <div id='portfolio' class='block'>
+      <h1>PORTFOLIO</h1>
+      <div class='block-content'>
         <div class='card'>
           <p class='card-title'>REACT TAKEOFF</p>
           <div class='card-content'>
             <div class='project'>
               <img src='assets/img/react.svg'>
+              <div class='project-links'>
+                <a class='hoverable' href='https://github.com/ftalves/react-takeoff'>
+                  <i class='fa fa-github'></i>
+                  Github
+                </a>
+              </div>
               <p>Meu ambiente base para criação de aplicações React.</p>
             </div>
           </div>
@@ -97,6 +109,16 @@
           <div class='card-content'>
             <div class='project'>
               <img src='assets/img/lounge.png'>
+              <div class='project-links'>
+                <a class='hoverable' href='https://react-lounge.herokuapp.com/'>
+                  <i class='fa fa-eye'></i>
+                  Abrir
+                </a>
+                <a class='hoverable' href='https://github.com/ftalves/react-lounge'>
+                  <i class='fa fa-github'></i>
+                  Github
+                </a>
+              </div>
               <p>Sala de chat feita com React e Socket.io. Deploy com Docker.</p>
               <p>(pode apresentar delay inicial devido ao servidor Heroku)</p>
             </div>
@@ -108,27 +130,43 @@
           <div class='card-content'>
             <div class='project'>
               <img src='assets/img/snacke.png'>
+              <div class='project-links'>
+                <a class='hoverable' href='https://ftalves.github.io/snacke'>
+                  <i class='fa fa-eye'></i>
+                  Abrir
+                </a>
+                <a class='hoverable' href='https://github.com/ftalves/snacke'>
+                  <i class='fa fa-github'></i>
+                  Github
+                </a>
+              </div>
               <p>Um simples jogo de snake feito com HTML Canvas. Demonstra algumas técnicas de programação funcional.</p>
             </div>
           </div>
         </div>
       </div>
-
-      <a class='scroll hoverable' href='#contact'>
-       CONTATO <i class='down-arrow fa fa-angle-down fa-2x'></i>
-     </a>
     </div>
 
-    <div id='contact' class='block'>
-      <div class='card'>
-        <h2>Contato</h2>
+    <div id='contato' class='block'>
+      <h1>CONTATO</h1>
 
+      <div class='block-content'>
+        <a class='hoverable' href='mailto:ftelles.bus@gmail.com'>
+          <i class='fa fa-envelope'></i>
+          ftelles.bus@gmail.com
+        </a>
+        <a class='hoverable' href='https://github.com/ftalves'>
+          <i class='fa fa-github'></i>
+          Github
+        </a>
+        <a class='hoverable' href='https://www.instagram.com/feliptide/'>
+          <i class='fa fa-instagram'></i>
+          Instagram
+        </a>
       </div>
-      <a class='scroll hoverable' href='#intro'>
-        <i>INÍCIO</i> <i class='fa fa-angle-up fa-2x'></i>
-      </a>
     </div>
 
+    <footer><span>Felipe Telles, 2019</span></footer>
   </main>
   <script src='js/index.js'></script>
 </body>

@@ -16,6 +16,6 @@ $('a.scroll').click(function() {
 })
 
 $(window).on('load', () => {
-  $('.fadeIn').delay(500).fadeTo(1000, 1)
-  $('.fadeIn-slow').delay(1500).fadeTo(2000, 1)
+  $('.fade-in').delay(500).fadeTo(1000, 1)
+  $('.fade-in-slow').delay(1500).fadeTo(2000, 1)
 })

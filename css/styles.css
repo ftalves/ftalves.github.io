@@ -1,6 +1,7 @@
 body {
   background: #222;
   color: #aaa;
+  margin: 0;
 }
 
 main {
@@ -18,10 +19,35 @@ a {
   text-decoration: inherit;
 }
 
-#social-buttons {
+.hoverable:hover {
+  transform: scale(1.2)
+}
+
+#header {
+  z-index: 1;
+  opacity: 0.3;
+  width: 100vw;
+  background: #666;
   position: fixed;
-  top: 10px;
-  right: 0;
+  top: 0;
+  display: flex;
+  align-content: center;
+}
+
+#header:hover {
+  opacity: 0.8;
+}
+
+.header-link {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+#social-buttons {
+  padding: 10px;
+  margin-left: auto;
   display: flex;
 }
 
@@ -34,16 +60,34 @@ a {
   width: 50px;
 }
 
+/* Block stuff */
 .block {
   max-width: 1200px;
-  min-height: 100vh;
-  padding: 20px;
+  padding-top: 100px;
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
+.block-content {
+  display: flex;
+}
+
+#intro {
+  height: 100vh;
+  padding-top: 0;
+  font-size: 25px;
+}
+
+#intro .block-content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card stuff */
 .card {
   margin-bottom: 10px;
   padding: 5px;
@@ -57,10 +101,6 @@ a {
   border-bottom: 3px solid #444;
 }
 
-#about-content {
-  display: flex;
-}
-
 #about-img {
   width: 380px;
   height: 500px;
@@ -71,34 +111,72 @@ a {
   display: flex;
 }
 
-#projects-content {
-  display: flex;
-}
+/* Project stuff */
 
-#projects .card {
-  margin: 30px;
-  width: 300px;
+#portfolio .card {
+  margin: 0 60px;
+  width: 350px;
+  padding: 20px;
+  margin: 10px;
+  border: 3px solid #444;
 }
 
 .project img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 20px auto;
+}
+
+.project-links {
+  background: #333;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#contato .block-content {
+  font-size: 25px;
+  border: 3px solid #444;
+  padding: 50px;
+  flex-direction: column;
+}
+
+#contato .block-content a {
+  margin: 10px 0;
+}
+
+footer {
+  color: #777;
+  width: 100%;
+  height: 40px;
+  background: #444;
+  margin-top: 200px;
+  line-height: 40px;
+  text-align: center;
 }
 
 @media (max-width: 1500px) {
-  #social-buttons {
-    position: relative;
-    margin-bottom: 50px;
-  }
-
-  #social-buttons .icon-wrapper img {
-    width: 50px;
+  #about .block-content, #portfolio .block-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media (max-width: 1000px) {
-  #about-content, #projects-content {
-    flex-direction: column;
-    align-items: center;
+  #header {
+    opacity: 0.7;
+  }
+
+  .header-link {
+    font-size: 12px;
+  }
+
+  #social-buttons {
+    display: none;
+  }
+
+  #intro {
+    font-size: 15px;
   }
 }
