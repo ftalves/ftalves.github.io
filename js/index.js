@@ -1,21 +1,16 @@
-var allowAutoScroll = true
-
 const scrollTo = id => {
   const target = $(id == '#' || id == '' ? 'html' : id)
+  console.log(target.get(0).offsetTop);
   const scrollTop = target.get(0).offsetTop
-  $(".mdl-layout__content").animate({ scrollTop }, 1000, 'swing', () => {
-    allowAutoScroll = true
-  })
+  $('html').animate({ scrollTop }, 500, 'swing')
 }
 
 $('a.scroll').click(function() {
-  if (allowAutoScroll) {
-    allowAutoScroll = false
-    scrollTo($(this).attr('href'))
-  }
+  scrollTo($(this).attr('href'))
 })
 
-$(window).on('load', () => {
+$(document).ready(() => {
   $('.fade-in').delay(500).fadeTo(1000, 1)
+  // console.log($('.fade-in'));
   $('.fade-in-slow').delay(1500).fadeTo(2000, 1)
 })

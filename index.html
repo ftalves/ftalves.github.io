@@ -12,16 +12,16 @@
 <body>
   <main>
     <div id='header'>
-      <a class='header-link hoverable' href='#intro'>INÍCIO</a>
-      <a class='header-link hoverable' href='#about'>SOBRE MIM</a>
-      <a class='header-link hoverable' href='#portfolio'>PORTFOLIO</a>
-      <a class='header-link hoverable' href='#contato'>CONTATO</a>
+      <a class='scroll header-link hoverable' href='#intro'>INÍCIO</a>
+      <a class='scroll header-link hoverable' href='#about'>SOBRE MIM</a>
+      <a class='scroll header-link hoverable' href='#portfolio'>PORTFOLIO</a>
+      <a class='scroll header-link hoverable' href='#contato'>CONTATO</a>
 
       <div id='social-buttons'>
-        <a class='icon-wrapper hoverable' href='https://github.com/ftalves'>
+        <a target='_blank' class='icon-wrapper hoverable' href='https://github.com/ftalves'>
           <img src='assets/img/github.png' title='GitHub'>
         </a>
-        <a class='icon-wrapper hoverable' href='assets/cv.pdf'>
+        <a target='_blank' class='icon-wrapper hoverable' href='assets/cv.pdf'>
           <img src='assets/img/resume.png' title='Currículo'>
         </a>
       </div>
@@ -92,9 +92,11 @@
           <p class='card-title'>REACT TAKEOFF</p>
           <div class='card-content'>
             <div class='project'>
-              <img src='assets/img/react.svg'>
+              <a target='_blank' href='https://github.com/ftalves/react-takeoff'>
+                <img src='assets/img/react.svg'>
+              </a>
               <div class='project-links'>
-                <a class='hoverable' href='https://github.com/ftalves/react-takeoff'>
+                <a target='_blank' class='hoverable' href='https://github.com/ftalves/react-takeoff'>
                   <i class='fa fa-github'></i>
                   Github
                 </a>
@@ -108,13 +110,15 @@
           <p class='card-title'>REACT LOUNGE</p>
           <div class='card-content'>
             <div class='project'>
-              <img src='assets/img/lounge.png'>
+              <a target='_blank' href='https://react-lounge.herokuapp.com/'>
+                <img src='assets/img/lounge.png'>
+              </a>
               <div class='project-links'>
-                <a class='hoverable' href='https://react-lounge.herokuapp.com/'>
+                <a target='_blank' class='hoverable' href='https://react-lounge.herokuapp.com/'>
                   <i class='fa fa-eye'></i>
                   Abrir
                 </a>
-                <a class='hoverable' href='https://github.com/ftalves/react-lounge'>
+                <a target='_blank' class='hoverable' href='https://github.com/ftalves/react-lounge'>
                   <i class='fa fa-github'></i>
                   Github
                 </a>
@@ -129,13 +133,15 @@
           <p class='card-title'>SNACKE</p>
           <div class='card-content'>
             <div class='project'>
-              <img src='assets/img/snacke.png'>
+              <a target='_blank' href='https://ftalves.github.io/snacke'>
+                <img src='assets/img/snacke.png'>
+              </a>
               <div class='project-links'>
-                <a class='hoverable' href='https://ftalves.github.io/snacke'>
+                <a target='_blank' class='hoverable' href='https://ftalves.github.io/snacke'>
                   <i class='fa fa-eye'></i>
                   Abrir
                 </a>
-                <a class='hoverable' href='https://github.com/ftalves/snacke'>
+                <a target='_blank'class='hoverable' href='https://github.com/ftalves/snacke'>
                   <i class='fa fa-github'></i>
                   Github
                 </a>
@@ -151,15 +157,19 @@
       <h1>CONTATO</h1>
 
       <div class='block-content'>
-        <a class='hoverable' href='mailto:ftelles.bus@gmail.com'>
+        <a target='_blank' class='hoverable' href='mailto:ftelles.bus@gmail.com'>
           <i class='fa fa-envelope'></i>
           ftelles.bus@gmail.com
         </a>
-        <a class='hoverable' href='https://github.com/ftalves'>
+        <a target='_blank' class='hoverable' href='https://github.com/ftalves'>
           <i class='fa fa-github'></i>
           Github
         </a>
-        <a class='hoverable' href='https://www.instagram.com/feliptide/'>
+        <a target='_blank' class='hoverable' href='assets/cv.pdf'>
+          <i class='fa fa-user'></i>
+          Curriculum
+        </a>
+        <a target='_blank' class='hoverable' href='https://www.instagram.com/feliptide/'>
           <i class='fa fa-instagram'></i>
           Instagram
         </a>
@@ -168,6 +178,7 @@
 
     <footer><span>Felipe Telles, 2019</span></footer>
   </main>
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
   <script src='js/index.js'></script>
 </body>
 
